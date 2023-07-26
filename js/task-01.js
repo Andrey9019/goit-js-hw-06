@@ -1,16 +1,16 @@
-const item = document.querySelectorAll(`h2`);
-console.log(`Number of categories:`, item.length);
+const categoriesList = document.querySelector(`#categories`);
+// console.log(categoriesList);
+const items = categoriesList.querySelectorAll(`.item`);
+// console.log(items);
 
-// const itemName = document.querySelector(`h2`);
-// console.log(`Category:`, itemName.textContent);
-// console.log();
+console.log(`Number of categories: ${items.length}`);
 
-// const itemEl = document.querySelectorAll(
-//   item.forEach(function (number, index) {
-//     console.log(`Індекс ${index}, значення ${number}`);
-//   })
-// );
-// console.log(itemEl);
+items.forEach((item) => {
+  const categoryName = item.querySelector(`h2`).textContent;
+  // console.log(categoryName);
+  const elemNum = item.querySelectorAll(`li`).length;
+  // console.log(elemNum);
 
-// console.log(`Category: itemEl`, itemEl);
-// console.log(`Elements: `);
+  console.log(`Category: ${categoryName}`);
+  console.log(`Elements: ${elemNum}`);
+});
