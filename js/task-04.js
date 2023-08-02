@@ -11,16 +11,12 @@ function handlerClickUp() {
   counterValue += 1;
   updateCounterValue();
 }
-// console.log(counterValue);
 function handlerClickDown() {
   counterValue -= 1;
   updateCounterValue();
 }
-// console.log(handlerClickDown);
 handlerClickUp();
 handlerClickDown();
 function updateCounterValue() {
   valueEl.textContent = counterValue;
 }
-// console.log(counterValue);
-// console.log(valueEl.textContent);

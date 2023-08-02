@@ -14,7 +14,6 @@ const images = [
 ];
 
 const img = document.querySelector(`.gallery`);
-// console.log(img);
 function createImg(arr) {
   const imgup = arr
     .map(
@@ -24,7 +23,6 @@ function createImg(arr) {
     )
     .join("");
   img.insertAdjacentHTML("beforeend", imgup);
-  console.log(imgup);
 }
 
 createImg(images);

@@ -1,7 +1,5 @@
 const validation = document.querySelector(`#validation-input`);
-// console.log(validation);
 const dataLengthValue = Number(validation.dataset.length);
-// console.log(dataLengthValue);
 validation.addEventListener(`blur`, validInp);
 
 function validInp() {
