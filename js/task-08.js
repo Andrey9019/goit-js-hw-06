@@ -6,11 +6,14 @@ function handlerForm(evt) {
   const elements = evt.target.elements;
   const formObj = {};
 
+  let inputCorrect = true;
+
   const formElem = Array.from(elements);
 
   formElem.forEach((element) => {
     if (element.nodeName === "INPUT") {
       if (element.value === "") {
+        inputCorrect = false;
         alert("Усі поля повинні бути заповнені!");
         return;
       }
@@ -18,6 +21,8 @@ function handlerForm(evt) {
     }
   });
 
-  console.log(formObj);
-  evt.target.reset();
+  if (inputCorrect) {
+    console.log(formObj);
+    evt.target.reset();
+  }
 }
